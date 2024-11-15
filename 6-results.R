@@ -49,12 +49,29 @@ sjPlot::tab_model(m4_control, m5_population, m7_arobust)
 
 # rozrzut IND vs. GPTUSE z etykietami krajów (na koniec wyników)
 
-
-ggplot(df) +
+point_ind_gptuse <-
+  ggplot(df) +
   geom_point(aes(x = IND, y = GPTUSE), size = 3) +
-  geom_text_repel(aes(label = country, x = IND, y = GPTUSE), min.segment.length = 0.3) +
-  coord_fixed() + 
+  geom_label_repel(
+    aes(label = country, x = IND, y = GPTUSE),
+    min.segment.length = 0.5,
+    force = 1,
+    box.padding = 0.5,
+    segment.size = 0.2,
+    size = 2,
+    max.overlaps = Inf,
+    fontface = "bold",
+    alpha = 0.8
+  ) +
+  coord_fixed() +
   scale_x_continuous(breaks = c(10, 20, 30, 40, 50, 60, 70, 80)) +
-  scale_y_continuous(breaks = c(10, 20, 30, 40, 50, 60, 70, 80)) +
-  theme_classic()
+  scale_y_continuous(breaks = c(10, 20, 30, 40, 50, 60, 70, 80),
+                     expand = expansion(add = 20)) +
+  theme_classic() +
+  theme(axis.text = element_text(size = 6),
+        axis.title = element_text(size = 8))
 
+print(point_ind_gptuse)
+
+ggsave("point_ind_gptuse.png", plot = point_ind_gptuse, units = "cm",
+       width = 12, height = 12) # 12 wygląda dobrze, poprawić nazwy osi
