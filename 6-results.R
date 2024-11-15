@@ -24,6 +24,8 @@ df <- df %>%
 
 # ew. karto ze zmienną zależną, nazwami krajów i populacją
 
+ggsave("cartodiagram_pie.png", plot = cartodiagram_pie,units = "cm", width = 16, height = 10)
+
 # tab1 ze statystkami opisowymi 
 
 table1::table1(~GPTUSE + NETUSE + PDI + IND + ASU + UAI + LTO + 
