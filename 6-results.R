@@ -24,7 +24,7 @@ df <- df %>%
 
 # ew. karto ze zmienną zależną, nazwami krajów i populacją
 
-ggsave("cartodiagram_pie.png", plot = cartodiagram_pie,units = "cm", width = 16, height = 10)
+# ggsave("cartodiagram_pie.png", plot = cartodiagram_pie,units = "cm", width = 16, height = 10)
 
 # tab1 ze statystkami opisowymi 
 
@@ -56,7 +56,7 @@ point_ind_gptuse <-
     aes(label = country, x = IND, y = GPTUSE),
     min.segment.length = 0.5,
     force = 1,
-    box.padding = 0.5,
+    box.padding = 0.6,
     segment.size = 0.2,
     size = 2,
     max.overlaps = Inf,
@@ -73,5 +73,5 @@ point_ind_gptuse <-
 
 print(point_ind_gptuse)
 
-ggsave("point_ind_gptuse.png", plot = point_ind_gptuse, units = "cm",
-       width = 12, height = 12) # 12 wygląda dobrze, poprawić nazwy osi
+# ggsave("point_ind_gptuse.png", plot = point_ind_gptuse, units = "cm",
+#        width = 12, height = 12) # 12 wygląda dobrze, poprawić nazwy osi
