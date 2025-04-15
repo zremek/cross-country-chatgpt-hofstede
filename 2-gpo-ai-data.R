@@ -16,6 +16,6 @@ d <- left_join(gpoai_data, hofstede_data)
 # no hofstede for South Africa United Kingdom and United States 
 
 
-DataExplorer::create_report(d)
+# DataExplorer::create_report(d)
 
 
