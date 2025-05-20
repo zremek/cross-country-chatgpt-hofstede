@@ -7,7 +7,7 @@ world_bank_pop %>% summary() # for codes?
 
 
 # data source: https://population.un.org/wpp/Download/Standard/Population/ 
-# file: https://web.archive.org/web/20241108093430mp_/https://population.un.org/wpp/Download/Files/1_Indicator%20(Standard)/EXCEL_FILES/2_Population/WPP2024_POP_F01_1_POPULATION_SINGLE_AGE_BOTH_SEXES.xlsx 
+# file: https://web.archive.org/web/20241108093430mp_/https://population.un.org/wpp/Download/Files/1_Indicator%20(Standard)/EXCEL_FILES/2_Population/WPP2024_POP_F01_1_POPULATION_SINGLE_AGE_BOTH_SEXES.xlsx =
 
 p <- read_excel("WPP2024_POP_F01_1_POPULATION_SINGLE_AGE_BOTH_SEXES.xlsx", 
                             sheet = "Estimates", skip = 16)
