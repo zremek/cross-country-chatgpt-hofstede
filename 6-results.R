@@ -87,7 +87,7 @@ cartodiagram_pie <- base_map_pie +
                                     sqrt(300 * 1e6) / 2500,
                                     sqrt(1000 * 1e6) / 2500), 
                          size = 3) +
-  annotate("text", label = "Population\n(Milions of people)", x = -150, y = -10, size = 3) +
+  annotate("text", label = "Population\n(Millions of people)", x = -150, y = -10, size = 3) +
   theme_classic() + 
   theme(legend.position = "bottom", 
         axis.line = element_blank(),
